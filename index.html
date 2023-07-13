@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <title>Document</title>
+</head>
+<body>
+  <header>
+    <p>&lt;Guiver Sanchez 👨🏽‍💻/ &gt;</p>
+  </header>
+  <div class="g-container">
+    <main class="container">
+      <article>
+        <h1 class="animate-once animate__animated animate__slideInLeft">
+          Welcome!
+        </h1>
+        <p class="animate__animated animate__fadeInRight animate__delay-1s">
+          I'm not just your friendly charming waitstaff server. I make websites too  🙏
+        </p>
+        
+        <ul>
+          <a class="animate__animated animate__zoomIn animate__delay-3s" href="">Rating Component using JavaScript</a>
+          <a class="animate__animated animate__zoomIn animate__delay-3s" href="">
+            Price component using CSS Grid
+          </a>
+          <a class="animate__animated animate__zoomIn animate__delay-3s" href="">
+            Accordion Component
+          </a>
+        </ul>
+        <strong class="animate__animated animate__delay-4s animate__zoomIn">Check out my source code <a href="https://github.com/SelfTaughtDood"><img src="./images/github-logo.png" alt="github logo"></a></strong>
+      </article>
+    </main>
+  </div>
+
+  <script>
+    // Check if the animation has already been shown
+    if (!sessionStorage.getItem('animationShown')) {
+      // Add the animation class to the elements that need to animate
+      document.addEventListener('DOMContentLoaded', function () {
+        const elementsToAnimate = document.querySelectorAll('.animate-once, .animate__animated');
+        elementsToAnimate.forEach((element) => {
+          element.classList.add('animate__zoomIn');
+        });
+      });
+  
+      // Set the flag to indicate that the animation has been shown
+      sessionStorage.setItem('animationShown', 'true');
+    } else {
+      // If animation has already been shown, remove the animation classes from the elements
+      const elementsToAnimate = document.querySelectorAll('.animate-once, .animate__animated');
+      elementsToAnimate.forEach((element) => {
+        element.classList.remove('animate__animated', 'animate__zoomIn', 'animate__slideInLeft', 'animate__fadeInRight', 'animate__delay-1s', 'animate__delay-3s', 'animate__delay-4s');
+      });
+    }
+  </script>
+  
+  
+  
+</body>
+</html>
